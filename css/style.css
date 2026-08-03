@@ -273,3 +273,45 @@ body {
     .section__title { font-size: 1.6rem; }
     .hero__title { font-size: 2rem; }
 }
+/* ТАБЛИЦЫ ЦЕН (для страницы услуг) */
+.price-table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+.price-table--full {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+.price-table--full thead {
+    background: var(--color-primary);
+    color: white;
+}
+.price-table--full th {
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+.price-table--full td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #F1F5F9;
+}
+.price-table--full tbody tr:hover {
+    background: #F8FAFC;
+}
+.price-table--full tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* БЛОГ */
+.blog-card {
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
