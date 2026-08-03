@@ -2,690 +2,316 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>LexGuard | Юридические услуги</title>
-    <!-- Подключение шрифтов: Inter для современного минималистичного стиля -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юрист в Кемерово — Юрпомощь 42. Консультация бесплатно</title>
+    <meta name="description" content="Юридическая помощь в Кемерово и области. Гражданские и административные дела. Выезд по городу. Запишитесь на консультацию по телефону +7 (3842) 12-34-56">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 для иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #ffffff;
-            color: #1e1e2e;
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-
-        /* Заглушки для изображений */
-        .image-placeholder {
-            background: linear-gradient(135deg, #f0f2f5 0%, #e4e8ec 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8a8fa3;
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
-        }
-
-        .image-placeholder i {
-            margin-right: 8px;
-            font-size: 1.1rem;
-        }
-
-        /* Шапка */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 0;
-            background: white;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 700;
-            font-size: 1.8rem;
-            letter-spacing: -0.5px;
-            color: #0f172a;
-        }
-
-        .logo i {
-            color: #2563eb;
-            font-size: 2rem;
-        }
-
-        .nav {
-            display: flex;
-            gap: 36px;
-            align-items: center;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: #334155;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .nav a:hover {
-            color: #2563eb;
-        }
-
-        .contact-phone {
-            background: #f1f5f9;
-            padding: 10px 20px;
-            border-radius: 40px;
-            font-weight: 600;
-            color: #0f172a;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .contact-phone i {
-            color: #2563eb;
-        }
-
-        /* Герой */
-        .hero {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            padding: 60px 0 80px;
-        }
-
-        .hero-content {
-            flex: 1;
-        }
-
-        .hero-badge {
-            background: #eef2ff;
-            color: #2563eb;
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 24px;
-            letter-spacing: 0.3px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            color: #0f172a;
-        }
-
-        .hero-highlight {
-            color: #2563eb;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #475569;
-            margin-bottom: 32px;
-            max-width: 500px;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 14px 32px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.1s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 8px 20px rgba(37,99,235,0.25);
-            text-decoration: none;
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-        }
-
-        .btn-outline {
-            background: white;
-            color: #0f172a;
-            border: 1.5px solid #e2e8f0;
-            padding: 14px 32px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-        }
-
-        .btn-outline:hover {
-            border-color: #2563eb;
-            color: #2563eb;
-            background: #f8fafc;
-        }
-
-        .hero-image {
-            flex: 1;
-            height: 460px;
-        }
-
-        .hero-image .image-placeholder {
-            width: 100%;
-            height: 100%;
-            border-radius: 32px;
-            background: linear-gradient(135deg, #d9e2ef 0%, #cbd5e1 100%);
-            font-size: 1rem;
-        }
-
-        /* Секция преимуществ */
-        .features {
-            padding: 80px 0;
-            background: #f9fafb;
-            border-radius: 60px 60px 0 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 56px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: #0f172a;
-        }
-
-        .section-title p {
-            color: #64748b;
-            margin-top: 12px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 32px 24px;
-            border-radius: 28px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.02);
-            border: 1px solid #f1f5f9;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 35px rgba(0,0,0,0.05);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            color: #2563eb;
-            margin-bottom: 20px;
-            background: #eef2ff;
-            width: 56px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 18px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .feature-card p {
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-
-        /* Услуги */
-        .services {
-            padding: 90px 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-            margin-top: 48px;
-        }
-
-        .service-item {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            background: #ffffff;
-            border: 1px solid #eef2f6;
-            padding: 28px 28px;
-            border-radius: 24px;
-            transition: all 0.2s;
-        }
-
-        .service-item:hover {
-            border-color: #2563eb;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.04);
-        }
-
-        .service-placeholder-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            background: #f1f5f9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #2563eb;
-            font-size: 1.8rem;
-        }
-
-        .service-text h4 {
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 6px;
-        }
-
-        .service-text p {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        /* Блок команды / заглушка фото */
-        .team {
-            padding: 80px 0;
-            background: #f9fafb;
-            border-radius: 0 0 60px 60px;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 28px;
-            margin-top: 48px;
-        }
-
-        .team-member {
-            background: white;
-            border-radius: 28px;
-            padding: 24px;
-            text-align: center;
-            border: 1px solid #f1f5f9;
-        }
-
-        .avatar-placeholder {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            border-radius: 24px;
-            background: #e9eef3;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: #94a3b8;
-        }
-
-        .team-member h4 {
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .team-member span {
-            color: #2563eb;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Отзывы с заглушками */
-        .testimonials {
-            padding: 90px 0;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            margin-top: 48px;
-        }
-
-        .testimonial-card {
-            background: #ffffff;
-            border: 1px solid #f1f5f9;
-            border-radius: 24px;
-            padding: 28px;
-        }
-
-        .testimonial-user {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-top: 20px;
-        }
-
-        .user-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            background: #dce3eb;
-        }
-
-        .stars {
-            color: #fbbf24;
-            margin-bottom: 14px;
-        }
-
-        /* Футер */
-        .footer {
-            background: #0f172a;
-            color: #e2e8f0;
-            padding: 60px 0 30px;
-            border-radius: 50px 50px 0 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        .footer-brand p {
-            margin-top: 16px;
-            color: #94a3b8;
-        }
-
-        .footer h4 {
-            color: white;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .footer a {
-            color: #cbd5e1;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-
-        .copyright {
-            margin-top: 50px;
-            text-align: center;
-            color: #64748b;
-            font-size: 0.9rem;
-            border-top: 1px solid #1e293b;
-            padding-top: 28px;
-        }
-
-        @media (max-width: 900px) {
-            .hero {
-                flex-direction: column;
-            }
-            .features-grid, .team-grid, .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav {
-                display: none;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Шапка -->
-        <header class="header">
-            <div class="logo">
-                <i class="fas fa-balance-scale"></i> LexGuard
-            </div>
-            <nav class="nav">
-                <a href="#">Главная</a>
-                <a href="#">Услуги</a>
-                <a href="#">О нас</a>
-                <a href="#">Контакты</a>
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__text">Юрпомощь <strong>42</strong></span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav__link active">Главная</a>
+                <a href="pages/uslugi.html" class="nav__link">Услуги и цены</a>
+                <a href="pages/o-nas.html" class="nav__link">О нас</a>
+                <a href="pages/blog.html" class="nav__link">Блог</a>
+                <a href="pages/kontakty.html" class="nav__link">Контакты</a>
             </nav>
-            <div class="contact-phone">
-                <i class="fas fa-phone-alt"></i> +7 (495) 123-45-67
+            <div class="header__contacts">
+                <a href="tel:+73842123456" class="header__phone">8 (3842) 12-34-56</a>
+                <button class="btn btn--gold btn--callback" id="callbackBtn">Заказать звонок</button>
             </div>
-        </header>
-    </div>
+            <button class="burger" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
 
-    <!-- Герой -->
-    <div class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <span class="hero-badge">⚖️ Юридическая фирма №1</span>
-                <h1>Защита ваших <span class="hero-highlight">интересов</span> на высшем уровне</h1>
-                <p>Профессиональные юридические услуги для бизнеса и частных клиентов. Более 12 лет опыта и сотни выигранных дел.</p>
-                <div class="btn-group">
-                    <a href="#" class="btn-primary"><i class="fas fa-calendar-check"></i> Бесплатная консультация</a>
-                    <a href="#" class="btn-outline"><i class="fas fa-briefcase"></i> Наши услуги</a>
+    <!-- ГЕРОЙ -->
+    <section class="hero">
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <span class="hero__badge">⚖️ Юридическая фирма в Кемерово</span>
+                <h1 class="hero__title">Юрист в Кемерово — защитим ваши права в суде и жизни</h1>
+                <p class="hero__subtitle">Гражданские и административные споры. Бесплатная консультация</p>
+                <div class="hero__stats">
+                    <div class="hero__stat"><strong>100+</strong> довольных клиентов</div>
+                    <div class="hero__stat"><strong>5+ лет</strong> в судах Кемерово</div>
+                    <div class="hero__stat"><strong>95%</strong> выигранных дел</div>
                 </div>
+                <a href="pages/uslugi.html#calculator" class="btn btn--accent btn--lg">Записаться на приём</a>
             </div>
-            <div class="hero-image">
-                <div class="image-placeholder">
-                    <i class="fas fa-gavel"></i> ФОТО ОФИСА / ЮРИСТЫ
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Преимущества -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Почему выбирают нас</h2>
-                <p>Мы сочетаем глубокую экспертизу и персональный подход</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-haltered"></i></div>
-                    <h3>Абсолютная конфиденциальность</h3>
-                    <p>Гарантируем полную защиту данных и адвокатскую тайну согласно законодательству.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Высокая результативность</h3>
-                    <p>Более 90% дел завершены в пользу клиентов благодаря тщательной подготовке.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
-                    <h3>Работаем 24/7</h3>
-                    <p>Экстренная юридическая помощь в любое время суток без выходных.</p>
+            <div class="hero__image">
+                <div class="image-placeholder image-placeholder--hero">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Фото юриста</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Услуги -->
-    <div class="container">
-        <section class="services">
-            <div class="section-title">
-                <h2>Юридические услуги</h2>
-                <p>Широкий спектр правовой поддержки</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-placeholder-img"><i class="fas fa-building"></i></div>
-                    <div class="service-text">
-                        <h4>Корпоративное право</h4>
-                        <p>Регистрация, реорганизация, сопровождение сделок M&A.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="service-placeholder-img"><i class="fas fa-file-contract"></i></div>
-                    <div class="service-text">
-                        <h4>Договорное право</h4>
-                        <p>Составление и анализ договоров, минимизация рисков.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="service-placeholder-img"><i class="fas fa-home"></i></div>
-                    <div class="service-text">
-                        <h4>Недвижимость и земля</h4>
-                        <p>Сопровождение сделок, споры, регистрация прав.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="service-placeholder-img"><i class="fas fa-user-shield"></i></div>
-                    <div class="service-text">
-                        <h4>Уголовная защита</h4>
-                        <p>Защита на всех стадиях процесса, адвокат с опытом.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Команда (заглушки фото) -->
-    <section class="team">
+    <!-- РЕШЕНИЕ ПРОБЛЕМ (АККОРДЕОН ЦЕН) -->
+    <section class="problems section">
         <div class="container">
-            <div class="section-title">
-                <h2>Наша команда</h2>
-                <p>Опытные юристы и адвокаты</p>
-            </div>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="avatar-placeholder"><i class="fas fa-user-circle"></i></div>
-                    <h4>Алексей Смирнов</h4>
-                    <span>Управляющий партнер</span>
+            <h2 class="section__title">Выберите вашу проблему, и я скажу цену</h2>
+            <p class="section__desc">Прозрачные цены без скрытых доплат. Фиксируем стоимость в договоре.</p>
+            <div class="accordion" id="priceAccordion">
+                <!-- Категория 1 -->
+                <div class="accordion__item">
+                    <button class="accordion__header">
+                        <span class="accordion__icon">📄</span>
+                        <span>Нужен документ (иск, жалоба, отзыв)</span>
+                        <span class="accordion__price">от 2 000 ₽</span>
+                        <i class="fas fa-chevron-down accordion__arrow"></i>
+                    </button>
+                    <div class="accordion__body">
+                        <table class="price-table">
+                            <tr><td>Устная консультация (до 30 мин)</td><td>Бесплатно</td></tr>
+                            <tr><td>Письменная консультация</td><td>3 000 – 5 000 ₽</td></tr>
+                            <tr><td>Исковое заявление (стандарт)</td><td>4 000 ₽</td></tr>
+                            <tr><td>Исковое заявление (сложное)</td><td>7 000 – 10 000 ₽</td></tr>
+                            <tr><td>Возражение на иск</td><td>5 000 ₽</td></tr>
+                            <tr><td>Претензия / досудебная</td><td>2 500 ₽</td></tr>
+                            <tr><td>Ходатайство, заявление</td><td>2 000 ₽</td></tr>
+                        </table>
+                        <a href="#" class="btn btn--gold btn--sm">Записаться на бесплатную консультацию</a>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <div class="avatar-placeholder"><i class="fas fa-user-circle"></i></div>
-                    <h4>Мария Иванова</h4>
-                    <span>Адвокат по гражданским делам</span>
+                <!-- Категория 2 -->
+                <div class="accordion__item">
+                    <button class="accordion__header">
+                        <span class="accordion__icon">⚖️</span>
+                        <span>Нужно сходить в суд (заседание)</span>
+                        <span class="accordion__price">от 10 000 ₽</span>
+                        <i class="fas fa-chevron-down accordion__arrow"></i>
+                    </button>
+                    <div class="accordion__body">
+                        <table class="price-table">
+                            <tr><td>Мировой суд</td><td>10 000 ₽</td></tr>
+                            <tr><td>Суд общей юрисдикции</td><td>15 000 ₽</td></tr>
+                            <tr><td>Арбитражный суд</td><td>20 000 – 30 000 ₽</td></tr>
+                            <tr><td>Апелляция</td><td>15 000 – 25 000 ₽</td></tr>
+                            <tr><td>Ведение дела "под ключ"</td><td>от 30 000 ₽</td></tr>
+                        </table>
+                        <a href="#" class="btn btn--gold btn--sm">Записаться на бесплатную консультацию</a>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <div class="avatar-placeholder"><i class="fas fa-user-circle"></i></div>
-                    <h4>Дмитрий Петров</h4>
-                    <span>Корпоративный юрист</span>
+                <!-- Категория 3 -->
+                <div class="accordion__item">
+                    <button class="accordion__header">
+                        <span class="accordion__icon">🚗</span>
+                        <span>Обжаловать штраф / ГИБДД / налоги</span>
+                        <span class="accordion__price">от 3 500 ₽</span>
+                        <i class="fas fa-chevron-down accordion__arrow"></i>
+                    </button>
+                    <div class="accordion__body">
+                        <table class="price-table">
+                            <tr><td>Обжалование штрафа ГИБДД</td><td>3 500 ₽</td></tr>
+                            <tr><td>Обжалование лишения прав</td><td>15 000 ₽</td></tr>
+                            <tr><td>Споры со страховой (ОСАГО)</td><td>10 000 ₽ + 10%</td></tr>
+                            <tr><td>Взыскание ущерба после ДТП</td><td>15 000 ₽ + 10%</td></tr>
+                        </table>
+                        <a href="#" class="btn btn--gold btn--sm">Записаться на бесплатную консультацию</a>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <div class="avatar-placeholder"><i class="fas fa-user-circle"></i></div>
-                    <h4>Елена Волкова</h4>
-                    <span>Семейное право</span>
+                <!-- Категория 4 -->
+                <div class="accordion__item">
+                    <button class="accordion__header">
+                        <span class="accordion__icon">🏠</span>
+                        <span>Спор по наследству / квартире / долгам</span>
+                        <span class="accordion__price">от 15 000 ₽</span>
+                        <i class="fas fa-chevron-down accordion__arrow"></i>
+                    </button>
+                    <div class="accordion__body">
+                        <table class="price-table">
+                            <tr><td>Вступление в наследство</td><td>15 000 – 25 000 ₽</td></tr>
+                            <tr><td>Оспаривание завещания</td><td>от 20 000 ₽</td></tr>
+                            <tr><td>Раздел имущества супругов</td><td>15 000 ₽</td></tr>
+                            <tr><td>Споры о праве собственности</td><td>от 20 000 ₽</td></tr>
+                        </table>
+                        <a href="#" class="btn btn--gold btn--sm">Записаться на бесплатную консультацию</a>
+                    </div>
+                </div>
+                <!-- Категория 5 -->
+                <div class="accordion__item">
+                    <button class="accordion__header">
+                        <span class="accordion__icon">💰</span>
+                        <span>Валютный контроль или закупки (44-ФЗ)</span>
+                        <span class="accordion__price">от 10 000 ₽</span>
+                        <i class="fas fa-chevron-down accordion__arrow"></i>
+                    </button>
+                    <div class="accordion__body">
+                        <table class="price-table">
+                            <tr><td>Консультация по валютному контролю</td><td>5 000 ₽</td></tr>
+                            <tr><td>Обжалование штрафа по валютному законодательству</td><td>15 000 – 25 000 ₽</td></tr>
+                            <tr><td>Жалоба в ФАС по 44-ФЗ / 223-ФЗ</td><td>10 000 – 15 000 ₽</td></tr>
+                        </table>
+                        <a href="#" class="btn btn--gold btn--sm">Записаться на бесплатную консультацию</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Отзывы -->
-    <div class="container">
-        <section class="testimonials">
-            <div class="section-title">
-                <h2>Отзывы клиентов</h2>
-                <p>Нам доверяют</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>«Благодаря LexGuard выиграли сложный арбитраж. Профессиональный подход и внимательность к деталям.»</p>
-                    <div class="testimonial-user">
-                        <div class="user-avatar image-placeholder" style="width:48px; height:48px; border-radius:14px;"></div>
-                        <div><strong>Игорь К.</strong><br><small>CEO, TechCorp</small></div>
-                    </div>
+    <!-- 5 ПРЕИМУЩЕСТВ -->
+    <section class="advantages section section--gray">
+        <div class="container">
+            <h2 class="section__title">Почему выбирают Юрпомощь 42</h2>
+            <div class="advantages__grid">
+                <div class="advantage-card">
+                    <div class="advantage-card__icon">🛡️</div>
+                    <h3>Гарантия результата</h3>
+                    <p>Возврат средств, если не выиграли дело. Фиксируем обязательства в договоре.</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>«Очень грамотная консультация по семейному праву. Спасибо Марии за поддержку и результат.»</p>
-                    <div class="testimonial-user">
-                        <div class="user-avatar image-placeholder" style="width:48px; height:48px; border-radius:14px;"></div>
-                        <div><strong>Анна М.</strong><br><small>Частный клиент</small></div>
-                    </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon">⏱️</div>
+                    <h3>Скорость</h3>
+                    <p>Готовим иск за 1 день. Не затягиваем сроки, работаем оперативно.</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>«Сопровождение сделки с недвижимостью прошло идеально. Все риски были учтены.»</p>
-                    <div class="testimonial-user">
-                        <div class="user-avatar image-placeholder" style="width:48px; height:48px; border-radius:14px;"></div>
-                        <div><strong>Сергей В.</strong><br><small>Предприниматель</small></div>
-                    </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon">🏛️</div>
+                    <h3>Опыт</h3>
+                    <p>5+ лет успешной практики в судах Кемерово и Кемеровской области.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon">💰</div>
+                    <h3>Фикс-цена</h3>
+                    <p>Стоимость называем сразу, без доплат и скрытых платежей.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon">📍</div>
+                    <h3>Рядом с вами</h3>
+                    <p>Офис в центре Кемерово. Выезд по городу и области.</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <!-- Футер -->
+    <!-- О КОМПАНИИ -->
+    <section class="about section">
+        <div class="container about__inner">
+            <div class="about__image">
+                <div class="image-placeholder image-placeholder--about">
+                    <i class="fas fa-building-columns"></i>
+                    <span>Фото офиса / юриста</span>
+                </div>
+            </div>
+            <div class="about__content">
+                <h2 class="section__title section__title--left">Юрпомощь 42 — ваш юрист в Кемерово</h2>
+                <p>Юридическая фирма в Кемерово. Специализация — гражданские и административные споры. Работаем с 2026 года. Доверено 100+ клиентов.</p>
+                <p>Наша миссия — сделать юридическую помощь доступной и понятной. Мы не просто оказываем услуги, мы решаем ваши проблемы.</p>
+                <div class="about__docs">
+                    <span><i class="fas fa-check-circle"></i> Диплом о высшем юридическом образовании</span>
+                    <span><i class="fas fa-check-circle"></i> Сертификаты и повышение квалификации</span>
+                    <span><i class="fas fa-check-circle"></i> Свидетельство ООО</span>
+                    <span><i class="fas fa-check-circle"></i> ИНН / ОГРН — в разделе "Контакты"</span>
+                </div>
+                <a href="pages/o-nas.html" class="btn btn--gold">Подробнее о нас</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПАКЕТЫ ПОД КЛЮЧ -->
+    <section class="packages section section--gray">
+        <div class="container">
+            <h2 class="section__title">Пакеты "Под ключ" — для тех, кто хочет гарантию</h2>
+            <div class="packages__grid">
+                <div class="package-card">
+                    <h3 class="package-card__title">«Стандарт»</h3>
+                    <div class="package-card__price">15 000 ₽</div>
+                    <p>Для физических лиц</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Консультация</li>
+                        <li><i class="fas fa-check"></i> Исковое заявление</li>
+                        <li><i class="fas fa-check"></i> 1 заседание в суде</li>
+                    </ul>
+                    <a href="#" class="btn btn--accent btn--block">Заказать</a>
+                </div>
+                <div class="package-card package-card--featured">
+                    <div class="package-card__badge">Популярный</div>
+                    <h3 class="package-card__title">«Бизнес»</h3>
+                    <div class="package-card__price">30 000 – 45 000 ₽</div>
+                    <p>Для ООО и ИП</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Анализ дела</li>
+                        <li><i class="fas fa-check"></i> Иск / отзыв</li>
+                        <li><i class="fas fa-check"></i> До 3 заседаний в арбитраже</li>
+                    </ul>
+                    <a href="#" class="btn btn--accent btn--block">Заказать</a>
+                </div>
+                <div class="package-card">
+                    <h3 class="package-card__title">«Максимальный»</h3>
+                    <div class="package-card__price">от 80 000 ₽</div>
+                    <p>До Верховного суда</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Досудебное урегулирование</li>
+                        <li><i class="fas fa-check"></i> Все инстанции</li>
+                        <li><i class="fas fa-check"></i> Полное сопровождение</li>
+                    </ul>
+                    <a href="#" class="btn btn--accent btn--block">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo" style="color:white;"><i class="fas fa-balance-scale"></i> LexGuard</div>
-                    <p>Юридическая компания полного цикла. Защита интересов с 2012 года.</p>
-                </div>
-                <div>
-                    <h4>Услуги</h4>
-                    <a href="#">Для бизнеса</a>
-                    <a href="#">Физическим лицам</a>
-                    <a href="#">Консультации</a>
-                </div>
-                <div>
-                    <h4>Компания</h4>
-                    <a href="#">О нас</a>
-                    <a href="#">Команда</a>
-                    <a href="#">Карьера</a>
-                </div>
-                <div>
-                    <h4>Контакты</h4>
-                    <a href="#"><i class="fas fa-map-marker-alt"></i> Москва, ул. Тверская, 12</a>
-                    <a href="#"><i class="fas fa-phone"></i> +7 (495) 123-45-67</a>
-                    <a href="#"><i class="fas fa-envelope"></i> info@lexguard.ru</a>
-                </div>
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <div class="logo logo--footer">Юрпомощь <strong>42</strong></div>
+                <p>Юридическая фирма в Кемерово. Гражданские и административные споры. Работаем с 2026 года.</p>
+                <p>ИНН: 4205XXXXXXXX / ОГРН: 1164205XXXXXXX</p>
             </div>
-            <div class="copyright">
-                © 2025 LexGuard. Все права защищены. Политика конфиденциальности.
+            <div class="footer__col">
+                <h4>Услуги</h4>
+                <a href="pages/uslugi.html">Разовые документы</a>
+                <a href="pages/uslugi.html">Судебное представительство</a>
+                <a href="pages/uslugi.html">Автоюрист</a>
+                <a href="pages/uslugi.html">Валютный контроль</a>
             </div>
+            <div class="footer__col">
+                <h4>Информация</h4>
+                <a href="pages/o-nas.html">О компании</a>
+                <a href="pages/blog.html">Блог</a>
+                <a href="pages/kontakty.html">Контакты</a>
+                <a href="pages/dogovor-oferty.html">Договор оферты</a>
+                <a href="pages/politika-konfidencialnosti.html">Политика конфиденциальности</a>
+                <a href="pages/soglasie-na-obrabotku.html">Согласие на обработку данных</a>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p><i class="fas fa-map-marker-alt"></i> г. Кемерово, ул. Ленина, 42</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+73842123456">8 (3842) 12-34-56</a></p>
+                <p><i class="fas fa-envelope"></i> info@urpomosh42.ru</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 Юрпомощь 42. Все права защищены.</p>
         </div>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal" id="callbackModal">
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose">&times;</button>
+            <h3>Заказать звонок</h3>
+            <form id="callbackForm">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                <textarea placeholder="Опишите вашу проблему (необязательно)"></textarea>
+                <button type="submit" class="btn btn--accent btn--block">Отправить</button>
+                <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="pages/soglasie-na-obrabotku.html">обработкой персональных данных</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
