@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lordi-back.github.io/legal-services-website/sitemap.xml
